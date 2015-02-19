@@ -1,0 +1,11 @@
+--- origsrc/mhash-0.9.9/lib/Makefile.am	2006-06-25 23:10:25.000000000 -0500
++++ src/mhash-0.9.9/lib/Makefile.am	2007-10-12 07:42:12.625000000 -0500
+@@ -25,7 +25,7 @@
+ libmhash_la_SOURCES = $(FRAMEWORK) $(KEYGEN) $(CRC) $(MD_SERIES) \
+ 			$(SHA_SERIES) $(TIGER) $(MISCELLANEOUS)
+ 
+-libmhash_la_LDFLAGS = -version-info 2:1
++libmhash_la_LDFLAGS = -version-info 2:1 -no-undefined
+ 
+ EXTRA_DIST = libmhash.sym
+ 

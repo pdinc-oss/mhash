@@ -1,0 +1,37 @@
+NAME="mhash"
+VERSION=0.9.9.9
+RELEASE=2
+CATEGORY="Libs"
+SUMMARY="Multiple hash algorithm library"
+DESCRIPTION="Mhash is a free library which provides a uniform interface to
+a large number of hash algorithms. These algorithms can be used to compute
+checksums, message digests, and other signatures."
+HOMEPAGE="http://mhash.sourceforge.net/"
+SRC_URI="mirror://sourceforge/mhash/mhash-${VERSION}.tar.bz2"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/mhash.git/plain/mhash-0.9.9.9-align.patch
+	http://pkgs.fedoraproject.org/cgit/mhash.git/plain/mhash-0.9.9.9-force64bit-tiger.patch
+	http://pkgs.fedoraproject.org/cgit/mhash.git/plain/mhash-0.9.9.9-fix-snefru-segfault.patch
+	http://pkgs.fedoraproject.org/cgit/mhash.git/plain/mhash-0.9.9.9-fix-mem-leak.patch
+	http://pkgs.fedoraproject.org/cgit/mhash.git/plain/mhash-0.9.9.9-fix-whirlpool-segfault.patch
+	http://pkgs.fedoraproject.org/cgit/mhash.git/plain/mhash-0.9.9.9-autotools-namespace-stomping.patch
+	http://pkgs.fedoraproject.org/cgit/mhash.git/plain/mhash-0.9.9.9-maxint.patch
+	http://pkgs.fedoraproject.org/cgit/mhash.git/plain/mhash-0.9.9.9-alignment.patch
+	http://pkgs.fedoraproject.org/cgit/mhash.git/plain/mhash-0.9.9.9-keygen_test_fix.patch
+	0.9.9-no-undefined.patch
+	0.9.9-vpath.patch
+"
+
+PKG_NAMES="lib${NAME}2 lib${NAME}-devel"
+libmhash2_CONTENTS="usr/bin/cygmhash-2.dll usr/share/doc/"
+libmhash_devel_CONTENTS='usr/include/ usr/lib/ usr/share/man/man3/'
+
+if defined ARCH_i686; then
+PKG_NAMES+=" mhash"
+mhash_CATEGORY="_obsolete"
+mhash_REQUIRES="libmhash2"
+fi
+
+DISTCLEANFILES="config.status libtool"
+
+DOCS="doc/skid2-authentication"

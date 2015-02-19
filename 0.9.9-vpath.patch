@@ -1,0 +1,20 @@
+--- origsrc/mhash-0.9.9/lib/Makefile.am	2006-06-25 23:10:25.000000000 -0500
++++ src/mhash-0.9.9/lib/Makefile.am	2007-10-12 07:42:12.625000000 -0500
+@@ -1,6 +1,6 @@
+ #AUTOMAKE_OPTIONS = foreign
+ 
+-AM_CPPFLAGS = -I../include
++AM_CPPFLAGS = -I$(top_builddir)/include -I$(top_srcdir)/include
+ 
+ lib_LTLIBRARIES = libmhash.la
+ 
+--- origsrc/mhash-0.9.9/src/Makefile.am	2005-10-28 00:11:01.000000000 -0500
++++ src/mhash-0.9.9/src/Makefile.am	2007-10-12 07:42:12.625000000 -0500
+@@ -1,6 +1,6 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-AM_CPPFLAGS = -I../include
++AM_CPPFLAGS = -I$(top_builddir)/include -I$(top_srcdir)/include
+ 
+ EXTRA_DIST = hash_test.sh 
+ 
