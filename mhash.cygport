@@ -1,6 +1,6 @@
 NAME="mhash"
 VERSION=0.9.9.9
-RELEASE=2
+RELEASE=3
 CATEGORY="Libs"
 SUMMARY="Multiple hash algorithm library"
 DESCRIPTION="Mhash is a free library which provides a uniform interface to
