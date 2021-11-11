@@ -1,0 +1,28 @@
+diff -ur origsrc/mhash-0.9.9.9/CYGWIN-PATCHES/README src/mhash-0.9.9.9/CYGWIN-PATCHES/README
+--- origsrc/mhash-0.9.9.9/CYGWIN-PATCHES/README	2005-01-12 11:54:24.000000000 -0500
++++ src/mhash-0.9.9.9/CYGWIN-PATCHES/README	2021-11-11 17:35:42.535694100 -0500
+@@ -65,9 +65,7 @@
+ 
+ Port Notes:
+ 
+------ version mhash-0.9.1-1 -----
++----- version mhash-0.9.9.9-3 -----
+ 
+-Maintainer change. Fixed to be mingw independent. All tests PASS.
+-
+-Cygwin port maintained by: Reini Urban <rurban@x-ray.at>
++Cygwin port maintained by: Jason Pyeron <jpyeron@pdinc.us>
+ Please address all questions to the Cygwin mailing list at <cygwin@cygwin.com>
+diff -ur origsrc/mhash-0.9.9.9/CYGWIN-PATCHES/setup.hint src/mhash-0.9.9.9/CYGWIN-PATCHES/setup.hint
+--- origsrc/mhash-0.9.9.9/CYGWIN-PATCHES/setup.hint	2005-01-12 11:54:24.000000000 -0500
++++ src/mhash-0.9.9.9/CYGWIN-PATCHES/setup.hint	2021-11-11 17:39:14.315477000 -0500
+@@ -1,7 +1,8 @@
+-sdesc: "MHash - library of hash algorithms (runtime environment)"
++sdesc: "library of hash algorithms (runtime environment)"
+ ldesc: "MHash is a library that provides a uniform interface to several hash
+ algorithms. It supports the basics for message authentication by following
+ rfc2104 (HMAC). It also includes some key generation algorithms which are based
+ on hash algorithms. This package contains the runtime environment."
+ category: Libs
+ requires: cygwin
++homepage: http://mhash.sourceforge.net/

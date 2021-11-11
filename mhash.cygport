@@ -20,6 +20,7 @@ PATCH_URI="
 	http://pkgs.fedoraproject.org/cgit/mhash.git/plain/mhash-0.9.9.9-keygen_test_fix.patch
 	0.9.9-no-undefined.patch
 	0.9.9-vpath.patch
+	mhash-cygwin-calm-fixes.patch
 "
 
 PKG_NAMES="lib${NAME}2 lib${NAME}-devel"
